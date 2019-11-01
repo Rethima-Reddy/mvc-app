@@ -6,8 +6,14 @@
 
 ## Links
 
-- [Demo](https://denisecase.github.io/node-express-mvc/)
-- [Source](https://github.com/denisecase/node-express-mvc)
+- [Source](https://github.com/Rethima-Reddy/node-express-mvc)
+
+## Contributurs
+ - Akhitha Thumula (Sections module)
+ - Rethima Reddy Polam(Courses module)
+ - Rohan Goud Bhandari (Intructors module)
+ - Mahender Reddy Surkanti (Students module)
+ 
 
 ## Dev Tools
 
@@ -65,8 +71,5 @@ Start app with nodemon: `nodemon app.js`.
 - [ESLint](https://eslint.org/)
 - [TravisCI](https://travis-ci.org/)
 
-## See Also
-
-- [More App Examples](https://profcase.github.io/web-apps-list/)
 
 
