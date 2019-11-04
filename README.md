@@ -8,10 +8,10 @@
 
 - [Source](https://github.com/Rethima-Reddy/node-express-mvc)
 
-## Contributurs
+## Contributors
  - Akhitha Tumula (Sections module)
  - Rethima Reddy Polam(Courses module)
- - Rohan Goud Bhandari (Intructors module)
+ - Rohan Goud Bhandari (Instructors module)
  - Mahender Reddy Surkanti (Students module)
  
 
