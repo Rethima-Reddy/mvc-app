@@ -14,7 +14,7 @@
  - Rohan Goud Bhandari (Instructors module)
  - Mahender Reddy Surkanti (Students module)
 
- ![](images\grup.PNG)
+ ![](images/grup.PNG)
  
 
 ## Dev Tools
