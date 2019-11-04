@@ -13,6 +13,8 @@
  - Rethima Reddy Polam(Courses module)
  - Rohan Goud Bhandari (Instructors module)
  - Mahender Reddy Surkanti (Students module)
+
+ ![](images/group.png)
  
 
 ## Dev Tools
