@@ -1,0 +1,62 @@
+[
+    {
+        "_id": 60,
+        "given": "Mahender Reddy",
+        "family": "Surkanti",
+        "email": "mahenderreddy.s1414@gmail.com",
+        "GPA": 3.5,
+        "GitHub": "https://github.com/Mahender1166",
+        "WebSite": "http://www.yourwebsite.com",
+        "SectionID": 30
+    },
+    {
+        "_id": 61,
+        "given": "Rethima Reddy",
+        "family": "Polam",
+        "email": "rethimareddy.p1305@gmail.com",
+        "GPA": 3.5,
+        "GitHub": "https://github.com/Rethima-Reddy",
+        "WebSite": "http://www.yourwebsite.com",
+        "SectionID": 30
+    },
+    {
+        "_id": 62,
+        "given": "Akhitha",
+        "family": "Tumula",
+        "email": "akhithaThumula@gmail.com",
+        "GPA": 3.5,
+        "GitHub": "https://github.com/Akhitha-Tumula",
+        "WebSite": "http://www.yourwebsite.com",
+        "SectionID": 30
+    },
+    {
+        "_id": 63,
+        "given": "Rohan Goud",
+        "family": "Bhandari",
+        "email": "rohanbandari@gmail.com",
+        "GPA": 3.5,
+        "GitHub": "https://github.com/Rohan6471",
+        "WebSite": "http://www.yourwebsite.com",
+        "SectionID": 31
+    },
+    {
+        "_id": 64,
+        "given": "Shravani Reddy",
+        "family": "Jaidi",
+        "email": "shravanireddy@gmail.com",
+        "GPA": 3.5,
+        "GitHub": "https://github.com/Shravani-Reddy",
+        "WebSite": "http://www.yourwebsite.com",
+        "SectionID": 31
+    },
+    {
+        "_id": 65,
+        "given": "Satish Kumar",
+        "family": "Mandapalli",
+        "email": "satishkumar@gmail.com",
+        "GPA": 3.5,
+        "GitHub": "https://github.com/Satish-Kumar",
+        "WebSite": "http://www.yourwebsite.com",
+        "SectionID": 31
+    }
+]

@@ -2,6 +2,7 @@ const Datastore = require('nedb') // set up a temporary (in memory) database
 const developerData = require('../data/developers.json') // read in data file
 const instructorData = require('../data/instructors.json') // read in data file
 const courseData = require('../data/courses.json') // read in data file
+const studentData = require('../data/students.json') // read in data file
 
 // inject Express app to configure it - EVERYTHING in through argument list
 
@@ -19,21 +20,30 @@ module.exports = (app) => {
   // for course module
   db.courses = new Datastore()
   db.courses.loadDatabase() // call the loadDatabase method
+  
+  // for Student module
+  db.student = new Datastore() // new object property
+  db.student.loadDatabase() // call the loadDatabase method
 
   // insert the sample data into our datastore
   db.developers.insert(developerData)
   db.instructors.insert(instructorData)
   // for Course module  
   db.courses.insert(courseData)
+  // for Student module  
+  db.students.insert(studentData)
 
   // initialize app.locals (these objects are available to the controllers)
   app.locals.developers = db.developers.find(developerData)
-  console.log(`${app.locals.developers.query.length} developers seeded`)
+  console.log(`${app.locals.developers.query.length} developers data seeded`)
   app.locals.instructors = db.instructors.find(instructorData)
-  console.log(`${app.locals.instructors.query.length} instuctors seeded`)
+  console.log(`${app.locals.instructors.query.length} instuctors data seeded`)
   // for Course module
   app.locals.courses = db.courses.find(courseData)
-  console.log(`${app.locals.instructors.query.length} course seeded`)
+  console.log(`${app.locals.instructors.query.length} course data seeded`)
+  // for Student module
+  app.locals.students = db.students.find(studentData)
+  console.log(`${app.locals.students.query.length} Student data seeded`)
 
 
   console.log('END Data Seeder. Sample data read and verified.')
