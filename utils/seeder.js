@@ -3,7 +3,7 @@ const developerData = require('../data/developers.json') // read in data file
 const instructorData = require('../data/instructors.json') // read in data file
 const courseData = require('../data/courses.json') // read in data file
 const studentData = require('../data/students.json') // read in data file
-
+const sectionData = require('../data/sections.json')//read in data file
 // inject Express app to configure it - EVERYTHING in through argument list
 
 module.exports = (app) => {
@@ -13,10 +13,13 @@ module.exports = (app) => {
 
   db.developers = new Datastore() // new object property
   db.developers.loadDatabase() // call the loadDatabase method
-  
+  // for instructors module
   db.instructors = new Datastore() // new object property
   db.instructors.loadDatabase() // call the loadDatabase method
-
+  // for Section module
+  db.sections = new Datastore() // new object property
+  db.sections.loadDatabase() // call the loadDatabase method
+  
   // for course module
   db.courses = new Datastore()
   db.courses.loadDatabase() // call the loadDatabase method
@@ -27,7 +30,10 @@ module.exports = (app) => {
 
   // insert the sample data into our datastore
   db.developers.insert(developerData)
+  // for instructor module
   db.instructors.insert(instructorData)
+  // for section module
+  db.sections.insert(sectionData)
   // for Course module  
   db.courses.insert(courseData)
   // for Student module  
@@ -36,8 +42,12 @@ module.exports = (app) => {
   // initialize app.locals (these objects are available to the controllers)
   app.locals.developers = db.developers.find(developerData)
   console.log(`${app.locals.developers.query.length} developers data seeded`)
+  // for instructors module
   app.locals.instructors = db.instructors.find(instructorData)
   console.log(`${app.locals.instructors.query.length} instuctors data seeded`)
+  // for sections module
+  app.locals.sections = db.sections.find(sectionData)
+  console.log(`${app.locals.sections.query.length} sections seeded`)
   // for Course module
   app.locals.courses = db.courses.find(courseData)
   console.log(`${app.locals.instructors.query.length} course data seeded`)
