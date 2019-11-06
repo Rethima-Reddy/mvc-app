@@ -8,13 +8,13 @@
 
 - [Source](https://github.com/Rethima-Reddy/node-express-mvc)
 
-## Contributors
+## Contributors for Group 2
  - Akhitha Tumula (Sections module)
  - Rethima Reddy Polam(Courses module)
  - Rohan Goud Bhandari (Instructors module)
  - Mahender Reddy Surkanti (Students module)
 
- ![](images/group.png)
+ ![](images/grup.PNG)
  
 
 ## Dev Tools

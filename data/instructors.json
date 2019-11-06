@@ -1,0 +1,42 @@
+[
+    {
+      "_id": 99,
+        "given": "Rohan",
+      "family": "Bhandari",
+      "email": "rohan@nwmissouri.edu",
+     "salary": 1000,
+     "github" : "https://github.com/rohn6471"
+    },
+        {
+      "_id": 100,
+        "given": "Ravi",
+      "family": "kandakatla",
+      "email": "ravi@nwmissouri.edu",
+     "salary": 1500,
+     "github" : "https://github.com/ravi641"
+    },
+    {
+  "_id": 101,
+    "given": "Satish",
+  "family": "mandapalli",
+  "email": "sathish@nwmissouri.edu",
+ "salary": 1800,
+ "github" : "https://github.com/sathish41"
+},
+{
+"_id": 102,
+"given": "anil",
+"family": "bomma",
+"email": "anil@nwmissouri.edu",
+"salary": 1000,
+"github" : "https://github.com/anil987"
+},
+{
+"_id": 103,
+"given": "veera",
+"family": "reddy",
+"email": "veera@nwmissouri.edu",
+"salary": 1000,
+"github" : "https://github.com/veera641"
+}
+  ]
