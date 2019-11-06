@@ -47,7 +47,7 @@ module.exports = (app) => {
   console.log(`${app.locals.instructors.query.length} instuctors data seeded`)
   // for sections module
   app.locals.sections = db.sections.find(sectionData)
-  console.log(`${app.locals.sections.query.length} sections seeded`)
+  console.log(`${app.locals.sections.query.length} sections data seeded`)
   // for Course module
   app.locals.courses = db.courses.find(courseData)
   console.log(`${app.locals.instructors.query.length} course data seeded`)
