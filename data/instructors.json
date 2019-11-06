@@ -1,0 +1,18 @@
+[
+    {
+      "_id": 99,
+        "given": "Rohan",
+      "family": "Bhandari",
+      "email": "rohan@nwmissouri.edu",
+     "salary": 1000,
+     "github" : "https://github.com/rohn6471"
+    },
+        {
+      "_id": 100,
+        "given": "Ravi",
+      "family": "kandakatla",
+      "email": "ravi@nwmissouri.edu",
+     "salary": 1000,
+     "github" : "https://github.com/ravi641"
+    }
+  ]
