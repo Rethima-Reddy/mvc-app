@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "SchoolNumber": "4401",
+        "CourseNumber": "56301",
+        "Name": "Developing Web Apps and Services",
+        "isSpring": false,
+        "isSummer": true,
+        "isFall" : false
+    },
+    {
+        "_id": 2,
+        "SchoolNumber": "4402",
+        "CourseNumber": "56302",
+        "Name": "Object Oriented Programming",
+        "isSpring": false,
+        "isSummer": false,
+        "isFall" : true
+    },
+    {
+        "_id": 3,
+        "SchoolNumber": "4403",
+        "CourseNumber": "56303",
+        "Name": "Advance Topics in DataBase",
+        "isSpring": false,
+        "isSummer": false,
+        "isFall" : true
+    },
+    {
+        "_id": 4,
+        "SchoolNumber": "4404",
+        "CourseNumber": "56304",
+        "Name": "Mobile Computing - Android",
+        "isSpring": false,
+        "isSummer": false,
+        "isFall" : true
+    },
+    {
+        "_id": 5,
+        "SchoolNumber": "4405",
+        "CourseNumber": "56305",
+        "Name": "Project Management",
+        "isSpring": true,
+        "isSummer": false,
+        "isFall" : false
+    },
+    {
+        "_id": 6,
+        "SchoolNumber": "4406",
+        "CourseNumber": "56306",
+        "Name": "Current topics in CS",
+        "isSpring": true,
+        "isSummer": false,
+        "isFall" : false
+    }
+]
