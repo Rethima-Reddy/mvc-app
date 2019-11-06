@@ -25,8 +25,8 @@ module.exports = (app) => {
   db.courses.loadDatabase() // call the loadDatabase method
   
   // for Student module
-  db.student = new Datastore() // new object property
-  db.student.loadDatabase() // call the loadDatabase method
+  db.students = new Datastore() // new object property
+  db.students.loadDatabase() // call the loadDatabase method
 
   // insert the sample data into our datastore
   db.developers.insert(developerData)
