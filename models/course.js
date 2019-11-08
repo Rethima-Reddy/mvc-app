@@ -31,27 +31,27 @@ const CourseSchema = new mongoose.Schema({
    default: '563'  
   },
   Name: {
-  type: String,
-  minlength: 10,
-  maxlength: 100,
-  required: true,
-  unique: true,
-  default: 'Developing Web Apps and Services'
+    type: String,
+    minlength: 10,
+    maxlength: 100,
+    required: true,
+    unique: true,
+    default: 'Developing Web Apps and Services'
   },
   inSpring: {
-  type: boolean,
-  required: true,
-  default: false
+    type: Boolean,
+    required: true,
+    default: false
   },
   inSummer: {
-  type: boolean,
-  required: true,
-  default: false
+    type: Boolean,
+    required: true,
+    default: false
   },
   infall: {
-  type: boolean,
-  required: true,
-  default: false
+    type: Boolean,
+    required: true,
+    default: false
   }
 })
 module.exports = mongoose.model('Course', CourseSchema)

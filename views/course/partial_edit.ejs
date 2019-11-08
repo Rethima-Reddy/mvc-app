@@ -1,0 +1,41 @@
+<!-- main - a row holds columns -->
+<div class=row>
+  <div class="col col-xs-12">
+
+    <div class="form-group">
+      <label for="SchoolNumber">SchoolNumber</label>
+      <input type="text" class="form-control" id="SchoolNumber" name="SchoolNumber" value="<%= course.SchoolNumber %>" required>
+    </div>
+
+    <div class="form-group">
+      <label for="CourseNumber">CourseNumber</label>
+      <input type="text" class="form-control" id="CourseNumber" name="CourseNumber" value="<%= course.CourseNumber %>">
+    </div>
+
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input type="text" class="form-control" id="Name" name="Name" value="<%= course.Name %>">
+    </div>
+    
+    <div class="form-group">
+        <label for="inSpring">Course avalable in</label><br />
+        <input type="checkbox" class="ml-3 mr-2" name="availability" value="inSpring">Spring<br />
+        <input type="checkbox" class="ml-3 mr-2" name="availability" value="inSummer">Summer<br />
+        <input type="checkbox" class="ml-3 mr-2" name="availability" value="inFall">Fall<br />
+    </div>
+  </div>
+</div>
+
+<!-- PUT CLIENT SIDE CODE HERE -->
+<script>
+
+  // prevent submission when hitting enter key - optional, but user-friendly 
+  document.forms[0].onkeypress = function (e) {
+    var key = e.charCode || e.keyCode || 0;
+    if (key == 13) {
+      e.preventDefault();
+    }
+  }
+
+// END CLIENT SIDE CODE  (close the script tag)
+</script>

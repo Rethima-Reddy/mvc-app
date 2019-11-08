@@ -7,11 +7,11 @@
 */
 const express = require('express')
 const api = express.Router()
-// const Model = require('../models/developer.js')
+const Model = require('../models/developer.js')
 const find = require('lodash.find')
-const notfoundstring = 'Could not find developer with id='
+const notfoundstring = 'Could not find with id='
 
-// RESPOND WITH JSON DATA  --------------------------------------------
+// RESPOND WITH JSON DATA for developers  --------------------------------------------
 
 // GET all JSON
 api.get('/findall', (req, res) => {
@@ -29,6 +29,7 @@ api.get('/findone/:id', (req, res) => {
   if (!item) { return res.end(notfoundstring + id) }
   res.send(JSON.stringify(item))
 })
+
 
 // RESPOND WITH VIEWS  --------------------------------------------
 
