@@ -2,21 +2,21 @@
 *  Course controller
 *  Handles requests related to course resources.
 *
-* @author Rethima-Reddy <s537157@nwmissouri.edu>
+* @author Mahender Reddy Surkanti <s537240@nwmissouri.edu>
 *
 */
 const express = require('express')
 const api = express.Router()
-const Model = require('../models/course.js')
+const Model = require('../models/student.js')
 const find = require('lodash.find')
-const notfoundstring = 'Could not find course with id='
+const notfoundstring = 'Could not find student with id='
 
 // RESPOND WITH JSON DATA  --------------------------------------------
 
 // GET all JSON
 api.get('/findall', (req, res) => {
   res.setHeader('Content-Type', 'application/json')
-  const data = req.app.locals.courses.query
+  const data = req.app.locals.students.query
   res.send(JSON.stringify(data))
 })
 
@@ -24,7 +24,7 @@ api.get('/findall', (req, res) => {
 api.get('/findone/:id', (req, res) => {
   res.setHeader('Content-Type', 'application/json')
   const id = parseInt(req.params.id)
-  const data = req.app.locals.courses.query
+  const data = req.app.locals.students.query
   const item = find(data, { _id: id })
   if (!item) { return res.end(notfoundstring + id) }
   res.send(JSON.stringify(item))
@@ -34,49 +34,49 @@ api.get('/findone/:id', (req, res) => {
 
 // GET to this controller base URI (the default)
 api.get('/', (req, res) => {
-  res.render('course/index.ejs', {
-    courses: req.app.locals.courses.query
+  res.render('student/index.ejs', {
+    students: req.app.locals.students.query
   })
 })
 
 // GET create
 api.get('/create', (req, res) => {
-  res.render('course/create', {
-    courses: req.app.locals.courses.query,
-    course: new Model()
+  res.render('student/create', {
+    students: req.app.locals.students.query,
+    student: new Model()
   })
 })
 
 // GET /delete/:id
 api.get('/delete/:id', (req, res) => {
   const id = parseInt(req.params.id)
-  const data = req.app.locals.courses.query
+  const data = req.app.locals.students.query
   const item = find(data, { _id: id })
   if (!item) { return res.end(notfoundstring + id) }
-  res.render('course/delete', {
-    course: item
+  res.render('student/delete', {
+    student: item
   })
 })
 
 // GET /details/:id
 api.get('/details/:id', (req, res) => {
   const id = parseInt(req.params.id)
-  const data = req.app.locals.courses.query
+  const data = req.app.locals.students.query
   const item = find(data, { _id: id })
   if (!item) { return res.end(notfoundstring + id) }
-  res.render('course/details', {
-    course: item
+  res.render('student/details', {
+    student: item
   })
 })
 
 // GET one
 api.get('/edit/:id', (req, res) => {
   const id = parseInt(req.params.id)
-  const data = req.app.locals.courses.query
+  const data = req.app.locals.students.query
   const item = find(data, { _id: id })
   if (!item) { return res.end(notfoundstring + id) }
-  res.render('course/edit', {
-    course: item
+  res.render('student/edit', {
+    student: item
   })
 })
 
@@ -89,12 +89,14 @@ api.post('/save', (req, res) => {
   const item = new Model()
   console.info(`NEW ID ${req.body._id}`)
   item._id = parseInt(req.body._id)
-  item.SchoolNumber = req.body.SchoolNumber
-  item.CourseNumber = req.body.CourseNumber
+  item.given = req.body.given
+  item.family = req.body.family
   item.Name = req.body.Name
-  item.inSpring = req.body.inSpring
-  item.inSummer = req.body.inSummer
-  item.inFall = req.body.inFall
+  item.email = req.body.email
+  item.GPA = req.body.GPA
+  item.GitHub = req.body.inFall
+  item.WebSite = req.body.WebSite
+  item.SectionID = req.body.SectionID
   res.send(`THIS FUNCTION WILL SAVE A NEW COURSE ${JSON.stringify(item)}`)
 })
 
