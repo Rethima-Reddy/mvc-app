@@ -4,7 +4,7 @@ _id:{
     type: Number,
     required: true
 },
-SectioNumber: {
+SectionNumber: {
     type: String,
     required : true,
     minlength:02,

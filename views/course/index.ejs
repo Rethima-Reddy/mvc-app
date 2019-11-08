@@ -18,14 +18,14 @@
         <div class="panel-heading"></div>
         <div class="text-muted pull-right"></div>
         <div class="panel-body">
-          <br> ID: <%=  course._id %>
-          <br> SchoolNumber: <%=course.SchoolNumber%>
-          <br> CourseNumber: <%=course.CourseNumber%>
-          <br> Name: <%=course.Name%>
-          <br> inSpring: <%=course.inSpring%>
-          <br> inSummer: <%=course.inSummer%>
-          <br> inFall: <%=course.inFall%>
-          <hr>
+          <br> <b>ID: </b><%=  course._id %>
+          <br> <b>SchoolNumber: </b><%=course.SchoolNumber%>
+          <br> <b>CourseNumber: </b><%=course.CourseNumber%>
+          <br> <b>Name: </b><%=course.Name%>
+          <br> <b>inSpring: </b><%=course.inSpring%>
+          <br> <b>inSummer: </b><%=course.inSummer%>
+          <br> <b>inFall: </b><%=course.inFall%>
+          <hr> 
           <a href="/course/delete/<%= course._id  %>" class="btn btn-danger"> Delete </a>
           <a href="/course/details/<%= course._id %>" class="btn btn-info"> Details </a>
           <a href="/course/edit/<%= course._id %>" class="btn btn-primary"> Edit </a>

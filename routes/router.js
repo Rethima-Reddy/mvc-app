@@ -30,5 +30,9 @@ router.use('/course', require('../controllers/course.js'))
 // Defer path requests to a particular controller
 router.use('/instructor', require('../controllers/instructor.js'))
 
+// Defer path requests to a student controller
+router.use('/student', require('../controllers/student.js'))
+// Defer path requests to a section controller
+router.use('/section',require('../controllers/section.js'))
 console.log('END routing')
 module.exports = router
