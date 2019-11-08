@@ -27,6 +27,8 @@ router.get('/index', (req, res, next) => {
 router.use('/dev', require('../controllers/developer.js'))
 // Defer path requests to a particular controller
 router.use('/course', require('../controllers/course.js'))
+// Defer path requests to a particular controller
+router.use('/instructor', require('../controllers/instructor.js'))
 
 console.log('END routing')
 module.exports = router
