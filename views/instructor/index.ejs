@@ -4,7 +4,7 @@
   <div class=row>
     <div class="col col-md-12">
       <a href="instructor/create" class="btn btn-primary new">
-        Create a new instructor
+        Create a new section
       </a>
 
       <h2>Recent entries</h2>
@@ -20,13 +20,13 @@
         <div class="text-muted pull-right"></div>
         <div class="panel-body">
 
-            <br> ID: <%= instructor._id %>
-            <br> Email: <%=instructor.email %>
-            <br> Given: <%=instructor.given %>
-            <br> Family: <%=instructor.family %>
-            <br> Salary: <%=instructor.salary %>
-            <br> GitHub: <%=instructor.github %>
-
+            <br> ID: <%=  instructor._id %>
+            <br> Given: <%= instructor.given %>
+            <br> Family: <%=instructor.family%>
+            <br> Email: <%=instructor.email%>
+            <br> Salary: <%=instructor.salary%>
+            <br> Github: <%=instructor.github %>
+      
           <hr>
           <a href="/instructor/delete/<%= instructor._id  %>" class="btn btn-danger"> Delete </a>
           <a href="/instructor/details/<%= instructor._id %>" class="btn btn-info"> Details </a>
