@@ -24,8 +24,6 @@ router.get('/index', (req, res, next) => {
 })
 
 // Defer path requests to a particular controller
-router.use('/dev', require('../controllers/developer.js'))
-// Defer path requests to a particular controller
 router.use('/course', require('../controllers/course.js'))
 // Defer path requests to a particular controller
 router.use('/instructor',require('../controllers/instructor.js'))

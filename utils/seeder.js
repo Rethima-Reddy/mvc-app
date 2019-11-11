@@ -1,5 +1,4 @@
 const Datastore = require('nedb') // set up a temporary (in memory) database
-const developerData = require('../data/developers.json') // read in data file
 const instructorData = require('../data/instructors.json') // read in data file
 const courseData = require('../data/courses.json') // read in data file
 const studentData = require('../data/students.json') // read in data file
@@ -11,8 +10,6 @@ module.exports = (app) => {
   console.log('START data seeder with course data')
   const db = {} // empty object to hold all collections
 
-  db.developers = new Datastore() // new object property
-  db.developers.loadDatabase() // call the loadDatabase method
   // for instructors module
   db.instructors = new Datastore() // new object property
   db.instructors.loadDatabase() // call the loadDatabase method
@@ -28,8 +25,6 @@ module.exports = (app) => {
   db.students = new Datastore() // new object property
   db.students.loadDatabase() // call the loadDatabase method
 
-  // insert the sample data into our datastore
-  db.developers.insert(developerData)
   // for instructor module
   db.instructors.insert(instructorData)
   // for section module
@@ -40,8 +35,6 @@ module.exports = (app) => {
   db.students.insert(studentData)
 
   // initialize app.locals (these objects are available to the controllers)
-  app.locals.developers = db.developers.find(developerData)
-  console.log(`${app.locals.developers.query.length} developers data seeded`)
   // for instructors module
   app.locals.instructors = db.instructors.find(instructorData)
   console.log(`${app.locals.instructors.query.length} instuctors data seeded`)
