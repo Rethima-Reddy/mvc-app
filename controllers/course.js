@@ -196,8 +196,6 @@ function getValue(cb) {
       let c = Math.round(count/strArr.length);
       //console.log(c);
       for(let i=0;i<strArr.length;i++){
-        console.log(strArr[i].length);
-        console.log(c);
         if(strArr[i].length<=c)
         {
           console.log(strArr[i]);          
