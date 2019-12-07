@@ -190,14 +190,17 @@ function getValue(cb) {
         if (result.max.length < time.length) {
           result.max = time;
         }
-        result.mean += time;
+       // result.mean += time;
         count = count + time.length;
       });
       let c = Math.round(count/strArr.length);
-      
+      //console.log(c);
       for(let i=0;i<strArr.length;i++){
-        if(strArr[i].length==c)
+        console.log(strArr[i].length);
+        console.log(c);
+        if(strArr[i].length<=c)
         {
+          console.log(strArr[i]);          
           result.mean=strArr[i];
         }
       }

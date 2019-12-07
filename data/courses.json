@@ -30,7 +30,7 @@
         "_id": 4,
         "SchoolNumber": "4404",
         "CourseNumber": "56304",
-        "Name": "Mobile Computing - Android",
+        "Name": "Mobile Computing -Android",
         "inSpring": false,
         "inSummer": false,
         "inFall" : true
