@@ -2,7 +2,7 @@
 *  Courses controller
 *  Handles requests related to course resources.
 *
-* @author
+* @author Rethima Reddy Polam
 *
 */
 const express = require('express')
@@ -38,11 +38,13 @@ api.get('/findone/:id', (req, res) => {
 // GET to this controller base URI (the default)
 api.get('/', (req, res) => {
   LOG.info(`Handling GET / ${req}`)
+getValue(function(result){
   CourseModel.find({}, (err, data) => {
     if (err) { return res.end('Error') }
     res.locals.courses = data
-    res.render('course/index')
+    res.render('course/index',{"result": result})
   })
+});
 })
 
 // GET create
@@ -165,6 +167,44 @@ api.post('/delete/:id', (req, res) => {
   })
 
 })
+function getValue(cb) {
+  let strArr = [];
+  let count =0;
+  CourseModel.find({}, (err, data) => {
+    if (err) {
+      return res.end('Error finding all')
+    } else {
+      data.map(function (item) {
+        strArr.push(item.Name);
+      });
+      let result = {
+        min: strArr[0],
+        max: strArr[0],
+        mean: 0
+      };
 
+      strArr.map(function (time) {
+        if (result.min.length > time.length) {
+          result.min = time;
+        }
+        if (result.max.length < time.length) {
+          result.max = time;
+        }
+        result.mean += time;
+        count = count + time.length;
+      });
+      let c = Math.round(count/strArr.length);
+      
+      for(let i=0;i<strArr.length;i++){
+        if(strArr[i].length==c)
+        {
+          result.mean=strArr[i];
+        }
+      }
+      
+      return cb(result);
+    }
+  });
+}
 
 module.exports = api

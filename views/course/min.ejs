@@ -1,0 +1,27 @@
+<style>
+    .form-control {
+        background-color : darkgrey;
+        border: 2px solid indianred;
+      border-radius: 12px;
+    }
+    
+    </style>
+    
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="mean">Mean of the characters</label>
+            <input type="text" class="form-control" id="mean" name="mean" value="<%= result.mean %>" disabled required>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="min">Length of Min Characters</label>
+            <input type="text" class="form-control" id="min" name="min" value="<%= result.min %>" disabled required>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="max">Length of Max Characters</label>
+            <input type="text" class="form-control" id="max" name="max" value="<%= result.max %>" disabled required>
+        </div>
+    </div>

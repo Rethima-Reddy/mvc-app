@@ -2,7 +2,7 @@
 *  Instructors controller
 *  Handles requests related to insructor resources.
 *
-* @author
+* @author Rohan Bhandari 
 *
 */
 const express = require('express')
