@@ -2,7 +2,7 @@
 *  Courses controller
 *  Handles requests related to course resources.
 *
-* @author
+* @author Rethima Reddy Polam
 *
 */
 const express = require('express')
@@ -168,7 +168,6 @@ api.post('/delete/:id', (req, res) => {
 
 })
 function getValue(cb) {
-  console.log(cb);
   let strArr = [];
   let count =0;
   CourseModel.find({}, (err, data) => {
@@ -194,10 +193,10 @@ function getValue(cb) {
         result.mean += time;
         count = count + time.length;
       });
-      let c = count/strArr.length;
+      let c = Math.round(count/strArr.length);
       
       for(let i=0;i<strArr.length;i++){
-        if(strArr[i].length=Math.round(c))
+        if(strArr[i].length==c)
         {
           result.mean=strArr[i];
         }
