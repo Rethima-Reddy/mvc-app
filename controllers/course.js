@@ -193,7 +193,6 @@ function getValue(cb) {
         }
         result.mean += time;
         count = count + time.length;
-        console.log(time);
       });
       let c = count/strArr.length;
       
@@ -201,7 +200,6 @@ function getValue(cb) {
         if(strArr[i].length=Math.round(c))
         {
           result.mean=strArr[i];
-          console.log(strArr[i])
         }
       }
       
