@@ -1,4 +1,3 @@
-const Datastore = require('nedb') // set up a temporary (in memory) database
 const courseData = require('../data/courses.json') // read in data file
 const instructorData = require('../data/instructors.json') // read in data file
 const sectionData = require('../data/section.json') //read in section data
